@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="cards.css">
+  <link rel="icon" type="image/png" href="fav.png">
+  <style>
+    :root {
+      --color-bg: #0D0E12;            /* App dark background */
+      --color-surface: #1C1E26;       /* Card/section background */
+      --color-text: #EDEEF1;          /* Main text */
+      --color-muted: #9CA3AF;         /* Muted/hint text */
+
+      --color-accent-1: #6366F1;      /* Bolt Indigo Primary */
+      --color-accent-2: #7C3AED;      /* Purple highlight */
+      --color-accent-3: #A855F7;      /* Fuchsia for bright accents */
+
+      --color-startup: #4F46E5;       /* For Startup tags/buttons */
+      --color-skill: #10B981;         /* For Skills tags/buttons */
+
+      --shadow: 0 8px 16px rgba(0,0,0,0.3);
+      --transition: all 0.3s ease-in-out;
+
+      --gradient-1: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-3));
+      --gradient-2: linear-gradient(135deg, var(--color-accent-2), var(--color-accent-3));
+      
+      --border-radius: 12px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 40px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--color-accent-3);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+
+    nav {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .logo a {
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a i {
+      margin-right: 8px;
+    }
+
+    .hero-banner {
+      background-color: var(--color-surface);
+      padding: var(--spacing-xl) 0;
+      margin-bottom: var(--spacing-xl);
+      border-bottom: 1px solid rgb(211, 250, 255);
+      text-align: center;
+      background-image: linear-gradient(rgba(16, 185, 129, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+
+    }
+
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(13, 14, 18, 0.7);
+      z-index: 1;
+    }
+
+    .hero-banner .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-banner h1 {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text);
+    }
+
+    .hero-banner p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--color-muted);
+      font-size: 1.1rem;
+    }
+
+    .search-container {
+      margin: 30px auto;
+    }
+
+   
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+    }
+
+   
+    .submit-section {
+      background-color: var(--color-surface);
+      padding: var(--spacing-xl);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--spacing-xl);
+      border: 1px solid rgb(195, 246, 255);
+    }
+
+    .submit-section h2 {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+      color: var(--color-text);
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: var(--spacing-sm);
+      font-weight: 500;
+    }
+
+    .form-group label i {
+      margin-right: 8px;
+      color: var(--color-accent-1);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      border: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--color-text);
+      font-size: 1rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: 2px solid var(--color-accent-1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md);
+    }
+
+    .submit-button {
+      background: var(--gradient-1);
+      color: white;
+      border: none;
+      padding: var(--spacing-md) var(--spacing-lg);
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: var(--spacing-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-sm);
+    }
+
+    .submit-button i {
+      font-size: 1.2rem;
+    }
+
+    .submit-button:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-banner h1 {
+        font-size: 2rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .image-upload-container {
+      border: 2px dashed var(--color-accent-1);
+      border-radius: var(--border-radius);
+      padding: var(--spacing-lg);
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .image-upload-container:hover {
+      border-color: var(--color-accent-3);
+    }
+
+    .file-input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .image-upload-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+
+    .image-upload-placeholder i {
+      font-size: 2rem;
+      color: var(--color-accent-1);
+    }
+
+    .image-upload-placeholder .small {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+
+    .image-preview {
+      max-width: 100%;
+      max-height: 200px;
+      display: none;
+      margin: 0 auto;
+    }
+
+    .highlight {
+      border-color: var(--color-accent-3);
+      background-color: rgba(99, 102, 241, 0.1);
+    }
+
+    .form-hint {
+      margin-top: var(--spacing-md);
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="index.html">Student<span style="color: var(--color-accent-3);">-Skills</span></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="local.html"><i class="fas fa-rocket"></i> Startups</a>
+          <a href=""><i class="fas fa-brain"></i> Skills</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="hero-banner">
+      <div class="content">
+        <h1>Student Skills</h1>
+        <p>Discover valuable skills offered by students or share your own expertise with the community.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container search-container">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search skills by name or tag...">
+    </div>
+    <a href="#submit-form">  <button class="btn primary">Add yours!</button></a>
+  </section>
+
+  <section class="container">
+    <div class="skills-container" id="skills-container">
+      <!-- Cards will be dynamically generated here -->
+    </div>
+  </section>
+
+  <section class="container" id="submit-form">
+    <div class="submit-section">
+      <h2>Share Your Skills</h2>
+      <form id="skill-form">
+        <div class="form-group">
+          <label><i class="fas fa-brain"></i> Skill Name</label>
+          <input type="text" id="skill-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label><i class="fas fa-comment-alt"></i> Description</label>
+          <textarea id="skill-description" rows="4" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label><i class="fas fa-tags"></i> Tags (comma-separated)</label>
+          <input type="text" id="skill-tags" placeholder="e.g., Design, JavaScript, Marketing">
+        </div>
+        
+        <div class="form-group">
+          <label for="skill-image-upload">Upload Image</label>
+          <div class="image-upload-container">
+            <input type="file" id="skill-image-upload" accept="image/*" class="file-input">
+            <div class="image-upload-placeholder">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Click to upload or drag and drop</p>
+              <p class="small">Supported formats: JPG, PNG, WebP</p>
+            </div>
+            <img id="image-preview" class="image-preview" src="" alt="">
+          </div>
+          <p class="form-hint">Or provide an image URL:</p>
+          <input type="url" id="skill-image" placeholder="https://example.com/image.jpg">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fab fa-whatsapp"></i> WhatsApp Link</label>
+            <input type="url" id="skill-whatsapp" placeholder="https://wa.me/1234567890">
+          </div>
+          
+          <div class="form-group">
+            <label><i class="fab fa-instagram"></i> Instagram Link</label>
+            <input type="url" id="skill-instagram" placeholder="https://instagram.com/yourskillaccount">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fab fa-youtube"></i> YouTube Link</label>
+            <input type="url" id="skill-youtube" placeholder="https://youtube.com/channel/yourskillchannel">
+          </div>
+          
+          <div class="form-group">
+            <label><i class="fas fa-image"></i> Image URL</label>
+            <input type="url" id="skill-image" placeholder="https://example.com/image.jpg">
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-button">
+          <i class="fas fa-brain"></i> Submit Skill
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="local.html"><i class="fas fa-rocket"></i> Startups</a>
+          <a href="student.html"><i class="fas fa-brain"></i> Skills</a>
+          <a href="mailto:contact@studentshowcase.com"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2025 Student Showcase. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function fetchSkills() {
+      try {
+        const response = await fetch('jsons/skills.json');
+        const data = await response.json();
+        const localSkills = getLocalSkills();
+        const allSkills = [...data.skills, ...localSkills];
+        renderSkills(allSkills);
+        setupSearch(allSkills);
+      } catch (error) {
+        console.error('Error fetching skills data:', error);
+      }
+    }
+    
+    function getLocalSkills() {
+      const localSkills = localStorage.getItem('skills');
+      return localSkills ? JSON.parse(localSkills) : [];
+    }
+    
+    function renderSkills(skills) {
+      const skillsContainer = document.getElementById('skills-container');
+      skillsContainer.innerHTML = '';
+      skills.forEach(skill => {
+        skillsContainer.innerHTML += createSkillCard(skill);
+      });
+    }
+    
+    function createSkillCard(skill) {
+      const tagsHtml = skill.tags.map(tag => 
+        `<span class="tag">${tag}</span>`
+      ).join('');
+      
+      const linksHtml = `
+        ${skill.links.whatsapp ? `<a href="${skill.links.whatsapp}" class="card-link" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>` : ''}
+        ${skill.links.instagram ? `<a href="${skill.links.instagram}" class="card-link" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
+        ${skill.links.youtube ? `<a href="${skill.links.youtube}" class="card-link" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>` : ''}
+      `;
+      
+      return `
+  <div class="card" data-tags="${skill.tags.join(',').toLowerCase()}" data-name="${skill.name.toLowerCase()}">
+    <div class="card-image-container">
+      <img src="${skill.image}" alt="${skill.name}" class="card-image">
+      <div class="card-image-overlay"></div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">${skill.name}</h3>
+      <p class="card-description">${skill.description}</p>
+      <div class="card-tags">${tagsHtml}</div>
+      <div id="flex">
+        <div class="card-links">${linksHtml}</div>
+        <div class="card-actions">
+          <a href="${skill.page}" class="btn btn primary">
+            <i class="fas fa-arrow-right"></i> More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+
+    }
+    
+    function setupSearch(skills) {
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        if (searchTerm === '') {
+          renderSkills(skills);
+          return;
+        }
+        const filteredSkills = skills.filter(skill => {
+          const name = skill.name.toLowerCase();
+          const tags = skill.tags.join(',').toLowerCase();
+          return name.includes(searchTerm) || tags.includes(searchTerm);
+        });
+        renderSkills(filteredSkills);
+      });
+    }
+    
+    document.getElementById('skill-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const id = 'skill-' + Date.now();
+      const name = document.getElementById('skill-name').value;
+      const description = document.getElementById('skill-description').value;
+      const tags = document.getElementById('skill-tags').value.split(',').map(tag => tag.trim());
+      const imageFile = document.getElementById('skill-image-upload').files[0];
+      const imageUrl = document.getElementById('skill-image').value;
+      const whatsapp = document.getElementById('skill-whatsapp').value;
+      const instagram = document.getElementById('skill-instagram').value;
+      const youtube = document.getElementById('skill-youtube').value;
+      
+      let image = imageUrl;
+      
+      if (imageFile) {
+        const reader = new FileReader();
+        image = await new Promise((resolve) => {
+          reader.onload = (e) => resolve(e.target.result);
+          reader.readAsDataURL(imageFile);
+        });
+      } else if (!imageUrl) {
+        image = 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800';
+      }
+      
+      const skill = {
+        id,
+        name,
+        description,
+        tags,
+        image,
+        links: {
+          whatsapp,
+          instagram,
+          amazon: '',
+          youtube
+        }
+      };
+      
+      const existingSkills = getLocalSkills();
+      existingSkills.push(skill);
+      localStorage.setItem('skills', JSON.stringify(existingSkills));
+      
+      const skillsContainer = document.getElementById('skills-container');
+      skillsContainer.innerHTML = createSkillCard(skill) + skillsContainer.innerHTML;
+      
+      document.getElementById('skill-form').reset();
+      document.getElementById('image-preview').style.display = 'none';
+      document.querySelector('.image-upload-placeholder').style.display = 'block';
+      
+      alert('Your skill has been submitted successfully!');
+    });
+
+    // Image upload preview
+    document.getElementById('skill-image-upload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const preview = document.getElementById('image-preview');
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+          document.querySelector('.image-upload-placeholder').style.display = 'none';
+          document.getElementById('skill-image').value = '';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Drag and drop support
+    const dropZone = document.querySelector('.image-upload-container');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight(e) {
+      dropZone.classList.add('highlight');
+    }
+
+    function unhighlight(e) {
+      dropZone.classList.remove('highlight');
+    }
+
+    dropZone.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+      const dt = e.dataTransfer;
+      const file = dt.files[0];
+      
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const preview = document.getElementById('image-preview');
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+          document.querySelector('.image-upload-placeholder').style.display = 'none';
+          document.getElementById('skill-image').value = '';
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', fetchSkills);
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "startups": [
+    {
+      "id": "startup-1",
+      "name": "Flezen Glow",
+      "description": "Flezen Glow offers organic, eco-friendly skincare products to nourish and enhance your skin’s natural radiance.",
+      "tags": ["Beauty", "Skincare", "Health"],
+      "image": "imgs/flz.png",
+      "links": {
+        "whatsapp": "https://wa.link/1bqddrmr",
+        "instagram": "https://www.instagram.com/flezenglow?igsh=MWcwYXI0bHRpNjcxbw==",
+        "amazon": "https://amzn.in/d/cuPsNH9",
+        "youtube": ""
+      },
+      "page": "soap.html"
+    },
+    {
+      "id": "startup-2",
+      "name": "Swadisht",
+      "description": "Here, swadisht Achar papad! We bring you the authentic taste of homemade pickles and crispy papads.",
+      "tags": ["Bellary", "food", "pickle"],
+      "image": "imgs/achar.jpg",
+      "links": {
+        "whatsapp": "https://wa.me/9448sa423546",
+        "instagram": "https://instagram.com/quickhealth",
+        "amazon": "",
+        "youtube": "https://youtube.com/@shilpakitchenofficial?si=-z_xDt1SV3-dB0RY"
+      },
+       "page": "achar.html"
+    },
+    {
+      "id": "startup-3",
+      "name": "Color Nest",
+      "description": "'Bringing colors to life - One brushstroke at a time', I specialize with painting services for small spaces and homes.",
+      "tags": ["Bellary", "Art", "paint"],
+      "image": "imgs/paint.jpg",
+      "links": {
+       "whatsapp": "https://wa.me/9110as264840",
+        "instagram": "https://instagram.com/studybuddy",
+        "amazon": "",
+        "youtube": "https://youtube.com/studybuddy"
+      },
+       "page": "color.html"
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-1",
+      "name": "Kalai Loop!",
+      "description": "we craft beautiful handmade silk thread bangles that blend treditions with atouch of alegance.",
+      "tags": ["student", "ku", "silk", "bangles"],
+      "image": "imgs/loops.jpg",
+      "links": {
+        "whatsapp": "https://wa.link/9xeauyy0",
+        "instagram": "https://www.instagram.com/monabharade?igsh=MWdvM3drZmR5MDY1aw==",
+        "amazon": "",
+        "youtube": ""
+      },
+       "page": "kalai.html"
+    },
+    {
+      "id": "skill-2",
+      "name": "Bloom Decor",
+      "description": "We bring your celebration to life with customized decorations with a boom of Affordability, reliable and done with Love.",
+      "tags": ["student", "smd", "Decor", "custom"],
+      "image": "imgs/decor.jpg",
+      "links": {
+        "whatsapp": "",
+        "instagram": "https://instagram.com/uxdaeaesigner",
+        "amazon": "",
+        "youtube": ""
+      },
+       "page": "decor.html"
+    },
+    {
+      "id": "skill-3",
+      "name": "Nritya kala",
+      "description": "where tradition meets passion. Am a dedicated kathak teacher to spread the beauty of Indian classic form.",
+      "tags": ["student", "rymec", "dance", "tutor"],
+      "image": "https://asset.gecdesigns.com/img/wallpapers/elegant-cute-dance-studio-theme-with-text-dance-hd-wallpaper-sr16042401-1713427572130-cover.webp",
+      "links": {
+        "whatsapp": "https://wa.me/1234ae567890",
+        "instagram": "https://instagram.com/datascientist",
+        "amazon": "",
+        "youtube": "https://youtube.com/datasciencechannel"
+      },
+       "page": "dance.html"
+    }
+  ]
+}

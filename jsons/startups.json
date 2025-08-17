@@ -1,0 +1,47 @@
+{
+  "startups": [
+    {
+      "id": "startup-1",
+      "name": "Flezen Glow",
+      "description": "Flezen Glow offers organic, eco-friendly skincare products to nourish and enhance your skin’s natural radiance.",
+      "tags": ["Beauty", "Skincare", "Health"],
+      "image": "imgs/flz.png",
+      "links": {
+        "whatsapp": "https://wa.link/1bqrmr",
+        "instagram": "https://www.instagram.com/flezenglow?igsh=MWcwYXI0bHRpNjcxbw==",
+        "amazon": "https://amzn.in/d/cuPsNH9",
+        "youtube": ""
+      },
+      "page": "sub/soap.html"
+    },
+   
+    {
+      "id": "startup-2",
+      "name": "Swadisht",
+      "description": "Here, swadisht Achar papad! We bring you the authentic taste of homemade pickles and crispy papads.",
+      "tags": ["Bellary", "food", "pickle"],
+      "image": "imgs/achar.jpg",
+      "links": {
+        "whatsapp": "https://wa.me/9448423546",
+        "instagram": "https://instagram.com/quickhealth",
+        "amazon": "",
+        "youtube": "https://youtube.com/@shilpakitchenofficial?si=-z_xDt1SV3-dB0RY"
+      },
+      "page": "sub/achar.html"
+    },
+    {
+      "id": "startup-3",
+      "name": "Color Nest",
+      "description": "'Bringing colors to life - One brushstroke at a time', I specialize with painting services for small spaces and homes.",
+      "tags": ["Bellary", "Art", "paint"],
+      "image": "imgs/paint.jpg",
+      "links": {
+       "whatsapp": "https://wa.me/9110264840",
+        "instagram": "https://instagram.com/studybuddy",
+        "amazon": "",
+        "youtube": "https://youtube.com/studybuddy"
+      },
+      "page": "sub/color.html"
+    }
+  ]
+}

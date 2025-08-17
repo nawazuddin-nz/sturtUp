@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swadisht</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="icon" type="image/png" href="/imgs/fav.png">
+    <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #a5dcff;
+            --card-bg: #2a2a2a;
+            --highlight: #8a63f6;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Roboto', sans-serif;
+        }
+        .stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    position: sticky; /* Changed from fixed to sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 10; /* Ensure it's above other elements if needed */
+}
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--body-font);
+            margin: 0;
+            padding: 0;
+        }
+
+        .startup-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        a.back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .startup-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .startup-header h1 {
+            font-family: var(--heading-font);
+            font-size: 3rem;
+            color: var(--highlight);
+        }
+
+        .startup-header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-color);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: var(--heading-font);
+            color: var(--accent-color);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .video iframe {
+            border: 4px solid var(--card-bg);
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--highlight);
+        }
+
+        .stat-item p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="startup-page">
+        <a href="index.html" class="back-link">&larr; Back to Showcase</a>
+
+        <header class="startup-header">
+            <h1>Swadist</h1>
+            <h2 style="margin-top: -40px;">A Taste of Tradition</h2>
+            <p>Bringing you authentic flavors and the rich heritage of homemade delicacies.</p>
+            
+            
+        </header>
+
+        <section class="stats">
+            <div class="stat-item">
+                <h3>4.2</h3>
+                <p>Avg. Rating</p>
+            </div>
+            <div class="stat-item">
+                <h3>14K+</h3>
+                <p>Purchase</p>
+            </div>
+            <div class="stat-item">
+                <h3>700+</h3>
+                <p>Positive Reviews</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>We offer homemade, hygienic, and flavorful Achar (pickles) and Papad made with traditional recipes and quality ingredients. Our products bring the authentic taste of home to your plate. From spicy mango pickles to crispy papads, everything is crafted with love and care. Perfect for every meal or snack time!</p>
+        </section>
+
+        <section class="gallery">
+            <img src="/imgs/ac1.jpg" alt="EcoSoap Product">
+            <img src="/imgs/ac2.jpg" alt="Soap Making Process">
+            <img src="/imgs/ac3.jpg" alt="Ingredients"> 
+            
+        </section>
+
+        <section class="video">
+            <h2>See More about our Products</h2>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+                <iframe 
+                src="https://www.youtube.com/embed/tvbdXBehlLY?start=0"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                title="YouTube video player"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+              
+              
+              
+              
+            </div>
+            
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            
+          
+        
+            <div class="social-icons">
+                <a href="https://wa.me/1234567890" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/ecosoap_official" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" class="icon youtube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.amazon.com/s?k=ecosoap" target="_blank" class="icon amazon"><i class="fab fa-amazon"></i></a>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Eco Street, Green City, Earth</p>
+
+
+            </div>
+        </section>
+        <style>
+            .contact-info {
+                text-align: center;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+            }
+            
+            .social-icons {
+                margin-top: 15px;
+            }
+            
+            .social-icons .icon {
+                display: inline-block;
+                margin: 0 10px;
+                font-size: 28px;
+                color: #555;
+                transition: color 0.3s;
+            }
+            
+            .social-icons .icon:hover {
+                color: #2ecc71; /* Light green hover effect */
+            }
+            
+            .icon.whatsapp { color: #25D366; }
+            .icon.instagram { color: #E1306C; }
+            .icon.youtube { color: #FF0000; }
+            .icon.amazon { color: #FF9900; }
+            </style>
+            
+        
+    </div>
+    <script>
+        // Get references to stat elements
+        const stats = {
+            rating: document.querySelector('.stat-item:nth-child(1) h3'),
+            downloads: document.querySelector('.stat-item:nth-child(2) h3'),
+            reviews: document.querySelector('.stat-item:nth-child(3) h3')
+        };
+    
+        // Define an array of possible stat updates
+        const statUpdates = [
+            { rating: "5.0", downloads: "21K+", reviews: "520+" },
+            { rating: "4.8", downloads: "19.5K", reviews: "480+" },
+            { rating: "4.9", downloads: "20K+", reviews: "500+" },
+            { rating: "4.1", downloads: "25K+", reviews: "256+" },
+            { rating: "4.3", downloads: "12.5K", reviews: "1025+" },
+            { rating: "4.2", downloads: "100K+", reviews: "365+" }
+        ];
+    
+        // Select all gallery images
+        const images = document.querySelectorAll('.gallery img');
+    
+        // Add click event listeners to each image
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                // Choose a stat update based on image index (wrap around if needed)
+                const update = statUpdates[index % statUpdates.length];
+                stats.rating.textContent = update.rating;
+                stats.downloads.textContent = update.downloads;
+                stats.reviews.textContent = update.reviews;
+            });
+        });
+    </script>
+    
+</body>
+</html>

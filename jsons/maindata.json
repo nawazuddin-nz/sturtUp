@@ -26,7 +26,7 @@
         "amazon": "",
         "youtube": "https://youtube.com/@shilpakitchenofficial?si=-z_xDt1SV3-dB0RY"
       },
-       "page": "achar.html"
+       "page": "sub/achar.html"
     },
     {
       "id": "startup-3",
@@ -40,7 +40,7 @@
         "amazon": "",
         "youtube": "https://youtube.com/studybuddy"
       },
-       "page": "color.html"
+       "page": "sub/color.html"
     }
   ],
   "skills": [
@@ -56,7 +56,7 @@
         "amazon": "",
         "youtube": ""
       },
-       "page": "kalai.html"
+       "page": "sub/kalai.html"
     },
     {
       "id": "skill-2",
@@ -70,7 +70,7 @@
         "amazon": "",
         "youtube": ""
       },
-       "page": "decor.html"
+       "page": "sub/decor.html"
     },
     {
       "id": "skill-3",
@@ -84,7 +84,7 @@
         "amazon": "",
         "youtube": "https://youtube.com/datasciencechannel"
       },
-       "page": "dance.html"
+       "page": "sub/dance.html"
     }
   ]
 }
